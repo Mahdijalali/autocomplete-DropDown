@@ -1,0 +1,14 @@
+﻿	/// <summary>
+        /// Search to find my list on the word which we want
+        /// </summary>
+        /// <param name="query">the word you want to search</param>
+        /// <returns> list of data in json </returns>
+        public string SearchPartByname(string query)
+        {
+            Classes.Part part = new Classes.Part();
+            List<AllPart> list = new List<AllPart>();
+            /* this function return a list of data that we want */
+            list = part.SearchPartByname(query);
+            var json = JsonConvert.SerializeObject(list);
+            return json;
+        }
